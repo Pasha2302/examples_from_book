@@ -5,9 +5,9 @@
 use rand::Rng;
 
 
-pub fn elseif_example() {
+pub fn _elseif_example() {
     // Выражения if
-    let number: u32 = rand::thread_rng().gen_range(1, 100);
+    let number: u32 = rand::thread_rng().gen_range(1..=100);
 
     if number < 17 {
         println!("\nУсловие ( if number < 5 ) было истинным. Namber = {}", number);

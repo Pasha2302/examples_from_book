@@ -3,3 +3,6 @@
 
 pub mod branches_if_else;  // Указывает, что существует модуль `mod1` в папке `modules`
 pub mod variables;  // Указывает, что существует модуль `mod2` в папке `modules`
+pub mod iterator_implementation;
+pub mod request_example;
+pub mod guessing_game;
