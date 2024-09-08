@@ -1,17 +1,27 @@
-mod modules;  // Подключаем модуль `modules`, определённый в `modules.rs`
+mod modules; // Подключаем модуль `modules`, определённый в `modules.rs`
 
-use modules::branches_if_else;  // Импортируем модуль `mod1` из `modules`
-use modules::variables;  // Импортируем модуль `mod2` из `modules`
-use modules::iterator_implementation;
+use modules::branches_if_else; // Импортируем модуль `branches_if_else` из `modules`
 use modules::guessing_game;
+use modules::iterator_implementation;
+use modules::variables;
 
 use modules::request_example;
+use modules::using_structures;
+use modules::enumeration;
 
 
-fn _test_func() {
-    iterator_implementation::_run_iterator();
-    branches_if_else::_elseif_example();
-    variables::_var_example();
+fn _test_func(use_func: &str) {
+    if use_func == "enum" {
+        enumeration::_start_example_enum();
+
+    } else {
+        iterator_implementation::_run_iterator();
+        branches_if_else::_elseif_example();
+        variables::_var_example();
+        guessing_game::_start_game();
+
+        using_structures::_start_example_struct();
+    }
 }
 
 
@@ -24,10 +34,7 @@ fn _start_get_data() {
 
 
 fn main() {
-    println!("\n\nHello, world!\n\n");
-
-    guessing_game::_start_game();
-
-    // _start_get_data();
     
+    _test_func("enum");
+
 }

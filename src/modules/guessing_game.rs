@@ -1,6 +1,7 @@
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
+// use std::num::ParseIntError;
 
 
 pub fn _start_game() {
@@ -22,7 +23,10 @@ pub fn _start_game() {
         //     .expect("Пожалуйста, наберите число!");
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
-            Err(_) => continue,
+            Err(e) => {
+                println!("Некорректный ввод: {}. Пожалуйста, введите число.", e);  // Обработка ошибок
+                continue;  // Пропуск итерации
+            },
         };
 
         println!("Вы загадали: {}", guess);

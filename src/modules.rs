@@ -6,3 +6,6 @@ pub mod variables;  // Указывает, что существует моду�
 pub mod iterator_implementation;
 pub mod request_example;
 pub mod guessing_game;
+
+pub mod using_structures;
+pub mod enumeration;
